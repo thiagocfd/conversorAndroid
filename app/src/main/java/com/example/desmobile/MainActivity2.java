@@ -11,45 +11,42 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
 
     EditText valorKm;
     TextView txtResultado;
-    Button btn_segunda_tela;
+    Button btn_primeira_tela;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
 
         valorKm = findViewById(R.id.valorKm);
 
         txtResultado = findViewById(R.id.txtResultado);
 
-        btn_segunda_tela = (Button) findViewById(R.id.btn_primeira_tela);
-        btn_segunda_tela.setOnClickListener(new View.OnClickListener() {
+        btn_primeira_tela = (Button) findViewById(R.id.btn_primeira_tela);
+        btn_primeira_tela.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent next = new Intent(MainActivity.this, MainActivity2.class);
+                Intent next = new Intent(MainActivity2.this, MainActivity.class);
                 startActivity(next);
             }
         });
-
-
-
     }
 
-    public void calcular(View view) {
+    public void calcular2(View view) {
 
-        double quantKm = Double.parseDouble(valorKm.getText().toString());
-        double milha = 0.62137;
+        double milha = Double.parseDouble(valorKm.getText().toString());
+        double quantKm = 1.60934;
 
-        double totalMilhas = quantKm * milha;
+        double totalKm = milha * quantKm;
 
         DecimalFormat decimal = new DecimalFormat("0.00");
-        String valorFormatado = decimal.format(totalMilhas);
+        String valorFormatado = decimal.format(totalKm);
 
-        txtResultado.setText(valorFormatado + " milhas");
+        txtResultado.setText(valorFormatado + " Km");
 
     }
 }

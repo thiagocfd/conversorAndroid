@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity2">
 
     <TextView
         android:id="@+id/textView"
@@ -14,7 +14,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="108dp"
         android:layout_marginBottom="136dp"
-        android:text="Conversor de Km para Milhas "
+        android:text="Conversor de Milhas para Km "
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#FF0000"
         android:textSize="24sp"
@@ -31,7 +31,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="Digite a distância e Km"
+        android:hint="Digite a distância e milhas"
         android:inputType="textPersonName|numberDecimal"
         android:minHeight="48dp"
         android:textColor="#000000"
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="200dp"
-        android:text="Milhas: "
+        android:text="KM: "
         android:textAllCaps="true"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -62,7 +62,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="100dp"
         android:background="#FF0000"
-        android:onClick="calcular"
+        android:onClick="calcular2"
         android:text="Converter"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
